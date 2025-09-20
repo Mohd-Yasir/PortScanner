@@ -23,22 +23,26 @@ You only need Python 3 installed on your system.
 
 ```bash
 python scanner.py localhost
-Custom Port Range
+```
 
-Bash
+## Custom Port Range
 
+```Bash
 python scanner.py localhost -p 80-81
-Scanning a Public Host (Requires explicit 'yes' confirmation)
+```
 
-Bash
+## Scanning a Public Host (Requires explicit 'yes' confirmation)
 
+```Bash
 python scanner.py scanme.nmap.org -p 20-30
-Interpreting Results 📊
+```
+
+## Interpreting Results 📊
 [+] Port {port} is OPEN: A service is actively listening on this port.
 
 [-] Port {port} is CLOSED: No service is listening on this port.
 
 [!] Port {port} requires elevated permissions: Your user account does not have permission to access this port.
 
-Ethical Disclaimer ⚖️
+## Ethical Disclaimer ⚖️
 This tool is for educational purposes only. You should NEVER scan a network or host without having explicit, written permission from the owner. Unauthorized port scanning is illegal in many places. The creator of this tool is not responsible for any misuse.
