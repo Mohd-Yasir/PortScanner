@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simple-port-scanner"
+version = "0.1.0"
+authors = [
+  { name="Mohd Yasir", email="mohdxyasir@gmail.com" },
+]
+description = "A simple, multi-threaded port scanner."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+scanner = "simple_port_scanner.scanner:main"

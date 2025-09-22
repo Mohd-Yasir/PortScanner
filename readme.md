@@ -1,48 +1,60 @@
-# Simple Python Port Scanner
+# Simple Port Scanner
 
-This is a basic, multi-threaded port scanner built in Python. It's designed to be a learning tool to understand how network connections work and how to build ethical security tools.
+A **simple, multi-threaded port scanner** built in Python for **educational purposes**.  
+This tool is intended to help learn Python sockets, threading, and CLI design. **Do not use it on networks you do not own or have explicit permission to scan.**
 
-## Features ✨
+## Features
+- Scan a range of ports on localhost or private networks.
+- Multi-threaded scanning for faster results.
+- Ethical check to warn users before scanning public IPs.
 
-* **Fast Scanning**: Uses multi-threading to scan a large range of ports quickly.
-* **Command-Line Interface**: Easy to use from the terminal with `argparse`.
-* **Ethical Safety Check**: Includes a built-in warning for scanning public IP addresses.
-* **User-Friendly Errors**: Provides clear error messages for common issues like permission denied.
+## Installation
 
-## Prerequisites ⚙️
+### 1) From PyPI (after publishing)
+```bash
+pip install simple-port-scanner
+```
 
-You only need Python 3 installed on your system.
-
-## How to Use 🚀
-
-1.  **Save the file**: Save the code as `scanner.py` on your computer.
-2.  **Open your terminal**: Navigate to the directory where you saved the file.
-3.  **Run the script**: Use the following commands to run the scanner.
-
-**Basic Scan (default ports 1-100)**
+### 2) Directly from GitHub
+You can clone the repo and install locally:
 
 ```bash
-python scanner.py localhost
+# Clone the repository
+git clone https://github.com/<your-username>/simple-port-scanner.git
+cd simple-port-scanner
+
+# Install using pip
+pip install .
 ```
 
-## Custom Port Range
+After installation, the CLI command `scanner` will be available:
 
-```Bash
-python scanner.py localhost -p 80-81
+```bash
+scanner --help
 ```
 
-## Scanning a Public Host (Requires explicit 'yes' confirmation)
+## Usage Example
 
-```Bash
-python scanner.py scanme.nmap.org -p 20-30
+Scan localhost ports 1-100:
+
+```bash
+scanner localhost -p 1-100
 ```
 
-## Interpreting Results 📊
-[+] Port {port} is OPEN: A service is actively listening on this port.
+Warning prompt will appear if you try to scan a public IP:
 
-[-] Port {port} is CLOSED: No service is listening on this port.
+```text
+Warning! You are about to scan a public host: <IP>. Do you have explicit permission to do this? (yes/no):
+```
 
-[!] Port {port} requires elevated permissions: Your user account does not have permission to access this port.
+## Legal & Ethical Notice
 
-## Ethical Disclaimer ⚖️
-This tool is for educational purposes only. You should NEVER scan a network or host without having explicit, written permission from the owner. Unauthorized port scanning is illegal in many places. The creator of this tool is not responsible for any misuse.
+This tool is for **educational use only**.
+
+- Only scan machines you own or have explicit permission to scan.
+- The author is not responsible for misuse.
+- Do not share this tool for illegal activities.
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
