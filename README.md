@@ -1,4 +1,4 @@
-# Simple Port Scanner
+# Multithread Port Scanner
 
 A **simple, multi-threaded port scanner** built in Python for **educational purposes**.  
 This tool is intended to help learn Python sockets, threading, and CLI design. **Do not use it on networks you do not own or have explicit permission to scan.**
@@ -12,7 +12,7 @@ This tool is intended to help learn Python sockets, threading, and CLI design. *
 
 ### 1) From PyPI (after publishing)
 ```bash
-pip install simple-port-scanner
+pip install multithread-port-scanner
 ```
 
 ### 2) Directly from GitHub
