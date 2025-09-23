@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "simple-port-scanner"
+name = "multithreaded-port-scanner"
 version = "0.1.0"
 authors = [
   { name="Mohd Yasir", email="mohdxyasir@gmail.com" },
@@ -11,11 +11,15 @@ authors = [
 description = "A simple, multi-threaded port scanner."
 readme = "README.md"
 requires-python = ">=3.8"
+license = { file = "LICENSE" }
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+keywords = ["security", "port scanner", "network"]
+urls = { "Homepage" = "https://github.com/Mohd-Yasir/Multithreaded-Port-Scanner" }
 
 [project.scripts]
-scanner = "simple_port_scanner.scanner:main"
+# Single-file setup, point directly to your file
+scanner = "multithreaded_port_scanner:main"
